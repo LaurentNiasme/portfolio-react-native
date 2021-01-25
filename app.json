@@ -1,0 +1,12 @@
+{
+  "name": "portofolionativev4",
+  "displayName": "portofolionativev4",
+  "expo": {
+    "name": "portofolionativev4",
+    "slug": "portofolionativev4",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
