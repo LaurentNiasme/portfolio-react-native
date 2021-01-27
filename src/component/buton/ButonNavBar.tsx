@@ -19,14 +19,12 @@ type ButonNavBarProps = {
     nameClick: string
 }
 
-
-
 const ButonNavBar = ({name, route, url, urlIcone, handleClick, nameClick}:ButonNavBarProps)=> {
     // const history = useHistory();
     const [overButon, setOverButon] = useState();
     const [nameButon, setNameBUton] = useState(false);
     const [urlIconeButon, setUrlIconeButon] = useState(urlIcone)
-
+// afficher le texte ou une icone
     const mouseOver = ()=> {
   
     }
@@ -34,7 +32,7 @@ const ButonNavBar = ({name, route, url, urlIcone, handleClick, nameClick}:ButonN
     const mouseIn = () => {
        
     };
-
+//AFficher l'icone
     const mouseLeave = () => {
 
     };

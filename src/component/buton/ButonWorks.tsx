@@ -11,7 +11,6 @@ type butonWorksProps = {
 
 const ButonWorks = ({handleClick, name, idBtn}:butonWorksProps)=> {
 
-
     return(
   
 

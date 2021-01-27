@@ -50,6 +50,7 @@ const MainAbout =()=> {
     }
 
     const createText =()=> {
+        //Le texte venant des data est envoyé dans le rendu
         return(
             < >
                 {
