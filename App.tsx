@@ -1,19 +1,46 @@
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
 
-export default function App() {
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+import globalStyle from './src/styles/global.component.style'
+import MainNavBar from './src/component/navBar/MainNavBar';
+import MainWorks from './src/component/works/MainWorks';
+import TestExpo from './src/component/works/TestExpo';
+
+
+declare const global: {HermesInternal: null | {}};
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <View>
+          <MainNavBar/>
+        </View>
+        <ScrollView style={globalStyle.main}>
+              <MainWorks /> 
+              {/* <TestExpo /> */}
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
