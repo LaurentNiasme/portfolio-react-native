@@ -16,7 +16,9 @@ type MainImageWorksProps = {
             titleImage:string,
             urlImage:number,
             tagImage:string,
-        }
+            imageCarrousel:number[],
+            description:string
+        },
         id:number,
     }[],
     selectedWorks: number,
@@ -44,7 +46,7 @@ const MainImageWorks = ({dataWorks, selectedWorks, launchVideo} : MainImageWorks
         
                         return(
                                 // <ImageWorks data={works} handleClickMovie={handleClickMovie}  />
-                                <WorksSwipe/>
+                                <WorksSwipe data={works}/>
                               
                         
                         )

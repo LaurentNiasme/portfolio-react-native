@@ -18,7 +18,7 @@ type imageWorksProps = {
             titleImage:string,
             urlImage:number,
             tagImage:string,
-        }
+        },
         id:number,
     },
     handleClickMovie : (urlVideo:string, titleImage:string)=> void

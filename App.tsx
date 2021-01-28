@@ -32,7 +32,7 @@ const App = () => {
         <View>
           <MainNavBar/>
         </View>
-        <ScrollView style={globalStyle.main}>
+        <ScrollView style={globalStyle.main} >
               <MainWorks /> 
               {/* <TestExpo /> */}
         </ScrollView>

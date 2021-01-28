@@ -13,6 +13,8 @@ export interface iWorksData  {
         titleImage:string,
         urlImage:number,
         tagImage:string,
+        imageCarrousel:number[],
+        description:string
     },
     id:number,
 }
@@ -39,7 +41,6 @@ const MainWorks = () => {
         setSelectedWorks(id);
         setNameDomainWorks(name);
         setShowVideo(false);
-   
         createShow()
     };
 
@@ -72,9 +73,11 @@ const MainWorks = () => {
            handleClick={handleClick} 
          />
        </View>
-        <Text style={styleWorks.titleDomainWorks}>
-            {nameDomainWorks}
-        </Text>
+       <View  style={styleWorks.titleDomainWorks}>
+            <Text style={styleWorks.txtTitleDomainWorks}>
+                {nameDomainWorks}
+            </Text>
+       </View>
         {/* on montre la video ou on montre les icones de travail */}
         {createShow()}
         {console.log("attention")}

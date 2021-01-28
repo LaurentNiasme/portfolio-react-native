@@ -12,7 +12,7 @@ module.exports = function(api) {
             alias: {
               "tests": ["./tests/"],
               "@components": "./src/components",
-              "@image":"./src/image"
+               "@images":"./src/asset/images",
             }
           }
       ]

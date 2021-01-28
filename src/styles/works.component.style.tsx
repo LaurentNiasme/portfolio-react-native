@@ -15,6 +15,7 @@ const styleWorks = StyleSheet.create({
     },
 
     containAllImage:{
+        marginBottom:90,
 
     },
 
@@ -31,33 +32,66 @@ const styleWorks = StyleSheet.create({
     },
 
     navBarWorks:{
+        display:'flex',
+        flexDirection:'row',
+        marginBottom:5,
 
     },
 
     titleDomainWorks:{
-
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        width:'100%',
+        marginBottom:20
     },
-    swipeContain:{
-     
+    txtTitleDomainWorks : {
+        color:'white',
+        fontWeight: 'bold',
+        fontSize: 25,
+    },
 
+    swipeContain:{
+        backgroundColor :'#313A56',
+        width:'100%',
+        // height:500,
+        marginBottom:20,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+    
+        elevation: 5,
     },
     scrollViewImage:{
-    
+        width:'100%',
+        height:'auto',
+       
 
     },
+    ctImage : {
+        width:'100%'
+    },
     swipeImage:{  
-   
-        backgroundColor:'blue',
+        // width:'100%',
+        // height:400,
+        // margin:5,
+        // backgroundColor:'red',
         resizeMode:'contain'
     },
 
     pucePageContain: {
         display:'flex',
         flexDirection:'row',
-        // alignItems:'center',
-        position:'absolute',
-        bottom:0, 
-        alignSelf:'center'
+        width:'100%',
+        alignItems:'center',
+        justifyContent:'center',
+        marginBottom:15
+    
         
     },
 
@@ -69,8 +103,29 @@ const styleWorks = StyleSheet.create({
     pucePageNoActive : {
         color:'black',
         margin:3
-    }
+    },
 
+    ctTitle:{
+        margin:5,
+
+    },
+
+    textTitle : {
+        color:'white',
+        fontSize:20
+
+    },
+
+    ctDescription : {
+        marginBottom:20,
+        marginLeft:5,
+
+    },
+    
+    textDescription : {
+        color : 'white',
+        fontSize:15
+    }
 
 
 
