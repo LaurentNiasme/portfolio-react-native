@@ -27,7 +27,7 @@ type ButonYearsJobProps = {
 }
 
 const ButonYearsJob = ({years, handleClick, idBtn, style, data}:ButonYearsJobProps) => {
-    console.log(data.years)
+    
     return (
         <View style={styleAbout.butonYearJob}>
             <TouchableOpacity onPress={(e)=>handleClick(e, idBtn, data)} style={style} >

@@ -16,27 +16,71 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import globalStyle from './src/styles/global.component.style'
 import MainNavBar from './src/component/navBar/MainNavBar';
 import MainWorks from './src/component/works/MainWorks';
-import TestExpo from './src/component/works/TestExpo';
+import MainAbout from './src/component/about/MainAbout';
+import MainHome from './src/component/home/MainHome';
+import MainSkills from './src/component/skills/MainSkills';
+
+
+
+const Stack = createStackNavigator();
+const StackNavBar = createStackNavigator();
+
+function stackNavBar() {
+  return(
+   <StackNavBar.Navigator>
+     <StackNavBar.Screen
+         name="navBar" 
+         component={MainHome} 
+         options={{ title: 'navBar' }}
+     />
+   </StackNavBar.Navigator>
+  )
+}
+
+function NavStack() {
+  return (
+     <Stack.Navigator
+     initialRouteName="home"
+        screenOptions={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#621FF7',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle :{
+            fontWeight: 'bold',
+          },
+        }}
+      >
+      <Stack.Screen 
+        name="home" 
+        component={MainHome} 
+        options={{ title: 'home' }}
+      />
+    </Stack.Navigator>
+  );
+}
 
 
 declare const global: {HermesInternal: null | {}};
 
+
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View>
-          <MainNavBar/>
-        </View>
-        <ScrollView style={globalStyle.main} >
-              <MainWorks /> 
-              {/* <TestExpo /> */}
-        </ScrollView>
-      </SafeAreaView>
+    <NavigationContainer>
+             <MainNavBar/>
+        </NavigationContainer>
+      {/* <StatusBar barStyle="dark-content" />
+  
+   */}
     </>
   );
 };

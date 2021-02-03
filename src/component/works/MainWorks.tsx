@@ -5,6 +5,7 @@ import MainImageWorks from './MainImageWorks';
 import VideoWorks from './VideoWorks';
 import dataWorks from './dataWorks'
 import ButonWorks from '../buton/ButonWorks';
+import MainGlobal from '../global/MainGlobal';
 
 
 export interface iWorksData  {
@@ -48,7 +49,7 @@ const MainWorks = () => {
        
          const data =  dataWorks.filter(works=>works.id===selectedWorks)
         //  setWorksDataVideo ( data)
-        console.log(data)
+   
         return (
             <View>
                  {showVideo ? <VideoWorks launchVideo={launchVideo}  urlVideo={urlVideo} titleVideo={titleVideo} /> : <MainImageWorks dataWorks={data} launchVideo={launchVideo} selectedWorks={selectedWorks} />}
@@ -57,32 +58,36 @@ const MainWorks = () => {
     }
 
     return(
-    <View >
-       
-        {/* barre de navigation */}
-       <View style={styleWorks.navBarWorks}>
-           <ButonWorks 
-           name={"Développeur web front"} 
-           idBtn={0} 
-           handleClick={handleClick} 
-           /> 
 
-           <ButonWorks 
-           name={"3d interactive"} 
-           idBtn={1} 
-           handleClick={handleClick} 
-         />
-       </View>
-       <View  style={styleWorks.titleDomainWorks}>
-            <Text style={styleWorks.txtTitleDomainWorks}>
-                {nameDomainWorks}
-            </Text>
-       </View>
-        {/* on montre la video ou on montre les icones de travail */}
-        {createShow()}
-        {console.log("attention")}
-      
-    </View>
+        <MainGlobal>
+
+            <View >
+            
+                {/* barre de navigation */}
+            <View style={styleWorks.navBarWorks}>
+                <ButonWorks 
+                name={"Développeur web front"} 
+                idBtn={0} 
+                handleClick={handleClick} 
+                /> 
+
+                <ButonWorks 
+                name={"3d interactive"} 
+                idBtn={1} 
+                handleClick={handleClick} 
+                />
+            </View>
+            <View  style={styleWorks.titleDomainWorks}>
+                    <Text style={styleWorks.txtTitleDomainWorks}>
+                        {nameDomainWorks}
+                    </Text>
+            </View>
+                {/* on montre la video ou on montre les icones de travail */}
+                {createShow()}
+               
+            
+            </View>
+           </MainGlobal>
     )
 }
 

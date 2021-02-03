@@ -28,7 +28,7 @@ type MainImageWorksProps = {
 const MainImageWorks = ({dataWorks, selectedWorks, launchVideo} : MainImageWorksProps) => {
 
     const handleClickMovie =(urlVideo:string, titleImage:string)=> {
-        console.log("show video")
+       
 
         launchVideo(true,urlVideo, titleImage )
        

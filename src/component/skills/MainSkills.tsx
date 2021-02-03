@@ -1,11 +1,14 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styleSkills from '../../styles/skills.component.style';
+import MainGlobal from '../global/MainGlobal';
 
 
 const MainSkills = () => {
 
     return (
+        <MainGlobal>
+
             <View style={styleSkills.mainSkill}>
                 <View>
                     <Text style={styleSkills.txtSkillTitle}> Expérience et compétence</Text>
@@ -34,6 +37,7 @@ const MainSkills = () => {
                     </Text>
                 </View>
             </View>
+        </MainGlobal>
     )
 }
 

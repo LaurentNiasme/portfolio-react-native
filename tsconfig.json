@@ -12,7 +12,7 @@
     "paths": {
     "*": ["src/*"],
     // "tests": ["tests/*"],
-    "@components/*": ["src/components/*"],
+    "@component/*": ["src/component/*"],
    "@images/*":["src/asset/images/*"]
     },
   }

@@ -4,7 +4,7 @@ import {View, Text} from 'react-native';
 
 const TestExpo = () =>{
     // const object = { a: 1, b: 2, c: 3 };
-    // console.log(object.a)
+ 
 
     return (
         <View>
